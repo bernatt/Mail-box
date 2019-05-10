@@ -52,12 +52,6 @@ class User
         $this->address = new ArrayCollection();
     }
 
-    public function __toString()
-    {
-        // TODO: Implement __toString() method.
-        return $this->name.$this->surname;
-    }
-
 
     /**
      * Get id
@@ -163,29 +157,5 @@ class User
     public function getAddress()
     {
         return $this->address;
-    }
-
-    /**
-     * Add address
-     *
-     * @param \UserListBundle\Entity\Address $address
-     *
-     * @return User
-     */
-    public function addAddress(\UserListBundle\Entity\Address $address)
-    {
-        $this->address[] = $address;
-
-        return $this;
-    }
-
-    /**
-     * Remove address
-     *
-     * @param \UserListBundle\Entity\Address $address
-     */
-    public function removeAddress(\UserListBundle\Entity\Address $address)
-    {
-        $this->address->removeElement($address);
     }
 }

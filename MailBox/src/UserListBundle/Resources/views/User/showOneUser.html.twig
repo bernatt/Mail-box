@@ -7,4 +7,6 @@
         <li><b>Nazwisko: </b>{{user.getSurname}}</li>
         <li><b>Opis: </b>{{user.getDescription}}</li>
     </ol>
+
+    <a href="{{ path('modifyuser', {'id': user.getId}) }}">Edytuj użytkownika!</a><hr>
 {% endblock %}
